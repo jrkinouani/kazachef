@@ -1,5 +1,6 @@
 class PlatsController < ApplicationController
   before_action :find_plat, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @plats = Plat.all.order("created_at DESC")
   end
@@ -7,19 +8,19 @@ class PlatsController < ApplicationController
   def show
     @plat = Plat.find(params[:id])
   end
+  
+  def new
+    @plat = current_user.plats.build
+  end
 
   def create
-      @plat =Plat.new(plat_params)
+    @plat = current_user.plats.build.(plat_params)
 
       if @plat.save
         redirect_to @plat
       else
         render "new"
       end
-  end
-
-  def new
-    @plat =Plat.new
   end
 
   def destroy
