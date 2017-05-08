@@ -6,9 +6,9 @@ class PlatsController < ApplicationController
   end
 
   def show
-    @plat = Plat.find(params[:id])
+
   end
-  
+
   def new
     @plat = current_user.plats.build
   end

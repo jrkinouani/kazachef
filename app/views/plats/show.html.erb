@@ -4,6 +4,8 @@
     <h2><%= @plat.description %></h2>
     <h2><%= @plat.link %></h2>
     <h2><%= @plat.price %></h2>
+    
+
 
     <h1><%= link_to "Edit", edit_plat_path(@plat) %></h1>
     <h1><%= link_to "Destroy", plat_path(@plat), method: :delete, data: {confirm: "Are you sure ?"} %></h1>
