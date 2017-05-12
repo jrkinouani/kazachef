@@ -1,6 +1,9 @@
 class PlatsController < ApplicationController
-  before_action :find_plat, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_plat, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+
+
   def index
     @plats = Plat.all.order("created_at DESC")
   end
@@ -14,7 +17,7 @@ class PlatsController < ApplicationController
   end
 
   def create
-    @plat = current_user.plats.build.(plat_params)
+    @plat = current_user.plats.build(plat_params)
 
       if @plat.save
         redirect_to @plat
@@ -45,7 +48,7 @@ class PlatsController < ApplicationController
     params.require(:plat).permit(:title, :description, :link, :price)
   end
 
-  def find_plat
+  def set_plat
       @plat = Plat.find(params[:id])
   end
 end
