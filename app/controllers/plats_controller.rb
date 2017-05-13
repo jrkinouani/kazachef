@@ -1,7 +1,7 @@
 class PlatsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_plat, only: [:show, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :current_user, only: [:edit, :update, :destroy]
 
 
   def index
@@ -45,7 +45,7 @@ class PlatsController < ApplicationController
   private
 
   def plat_params
-    params.require(:plat).permit(:title, :description, :link, :price)
+    params.require(:plat).permit(:title, :description, :link, :price, :image)
   end
 
   def set_plat
