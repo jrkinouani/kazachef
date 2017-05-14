@@ -28,8 +28,6 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-
-
               <%= link_to "Kazachef", root_path, :class => "navbar-brand" %>
           </div>
 
@@ -39,15 +37,15 @@
             <ul class="nav navbar-nav navbar-right">
 
               <li><a href="#">About</a></li>
-           <!--<li><a href="#">Another action</a></li>
-           <li><a href="#">Something else here</a></li>
-           <li role="separator" class="divider"></li>
-           <li><a href="#">Separated link</a></li>
-           <li role="separator" class="divider"></li>
-           <li><a href="#">One more separated link</a></li>-->
+              <li><%if user_signed_in? %></li>
+              <li>  <a href="#"> Hi <%= current_user.name %> </a></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+              <li> <%= button_to "add new post", new_plat_path, class: "btn btn-primary navbar-btn", :method => :get  %></li>
+             <% else %>
+             <li><%= link_to "Sign up", new_user_registration_path %></li> <li><%= link_to "sign in", new_user_session_path %></li>
+             <% end %>
+             </ul>
                </div>
-
-            </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
