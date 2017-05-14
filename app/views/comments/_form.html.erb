@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class=" col-md-4">
+    <%= simple_form_for([@plat, @plat.comments.build]) do |f| %>
+    <%= f.text_field :content , :placeholder => "Ajouter votre commentaire sur le plat", class:"form-control",label: "Reply to thread"%>
+    <%= f.submit :value => "Validez votre commentaire",  :class => "btn btn-lg btn-primary btn-block"%>
+    <% end%>
+  </div>
+  </div>
+</div>

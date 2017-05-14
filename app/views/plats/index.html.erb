@@ -2,7 +2,8 @@
   <div class="row">
     <% @plats.each do |plat| %>
     <h2><%= link_to plat.title.capitalize,plat %></h2>
-    <%= link_to (image_tag plat.image.url(:small)), plat%>
+    <%= link_to (image_tag plat.image.url(:small)), plat%><br/>
+    <%= plat.comments.count %> Commantaire
     <% end %><br/>
 
     <h3><%= link_to " Ajouter un plat", new_plat_path %></h3>

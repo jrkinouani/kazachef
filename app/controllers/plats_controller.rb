@@ -9,7 +9,7 @@ class PlatsController < ApplicationController
   end
 
   def show
-
+    @comments = Comment.where(plat_id: @plat)
   end
 
   def new
