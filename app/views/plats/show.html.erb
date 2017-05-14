@@ -6,7 +6,7 @@
     <h2><%= @plat.link %></h2>
     <h2><%= @plat.price %></h2>
     <h2><%= @plat.user.name %></h2>
-
+    
     <!--comment-->
     <h2><%= @comment_count= pluralize(@plat.comments.count, "comment") %></h2>
     <% @comments.each do |comment| %>
