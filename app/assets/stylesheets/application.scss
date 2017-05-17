@@ -1,2 +1,11 @@
 @import "bootstrap-sprockets";
-@import "bootstrap"; 
+@import "bootstrap";
+img
+{
+  width: 100%!important;
+}
+h3.title_plat
+{
+  color: white;
+  font-size: 18px;
+}

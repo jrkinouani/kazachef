@@ -1,11 +1,14 @@
-<div class="container">
+
   <div class="row">
     <% @plats.each do |plat| %>
-    <h2><%= link_to plat.title.capitalize,plat %></h2>
-    <%= link_to (image_tag plat.image.url(:small)), plat%><br/>
-    <%= plat.comments.count %> Commantaire
-    <% end %><br/>
+    <div class="col-lg-4 col-md-4 col-sm-3 col-sx-12">
 
-    <h3><%= link_to " Ajouter un plat", new_plat_path %></h3>
+      <%= link_to (image_tag plat.image.url,class:"img-responsive"), plat%><br/>
+
+      <div class="text-center">
+        <h3 class="title_plat"><%= link_to plat.title.capitalize,plat %></h3>
+      </div>
+      <%= plat.comments.count %> Commantaire
+      </div>
+      <% end %><br/>
   </div>
-</div>
