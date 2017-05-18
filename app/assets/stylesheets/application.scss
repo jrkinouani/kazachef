@@ -1,3 +1,4 @@
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 img
@@ -6,6 +7,11 @@ img
 }
 h3.title_plat
 {
-  color: white;
-  font-size: 18px;
+  color: red;
+  font-size: 28px;
+}
+
+.navbar-brand
+{
+  font-size: 28px!important;
 }
