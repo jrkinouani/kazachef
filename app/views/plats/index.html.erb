@@ -1,12 +1,44 @@
+<header >
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
 
+
+                    <h2 class="slogan">MisterBrikol selectionne pour vos travaux <br>
+                    les meilleures bricoleurs   pour une mise en relation <br>
+                  par un simple sms</h2>
+
+                    <h1>Contactez-nous par sms au <br> 06 93 15 99 93</h1>
+                </div>
+            </div>
+        </div>
+  </header>
+
+  <div class="row">
+  <nav class="navbar menu">
+   <div class="container-fluid">
+     <ul class="nav navbar-nav navbar-left">
+
+       <li><a href="#">Comment ça marche ?</a></li>
+       <li><a href="#">About</a></li>
+
+      </ul>
+   </div><!-- /.container-fluid -->
+ </nav>
+ </div>
+
+
+<div class="container-fluid">
   <div class="row">
     <% @plats.each do |plat| %>
     <div class="col-lg-4 col-md-4 col-sm-3 col-sx-12">
       <%= link_to (image_tag plat.image.url,class:"img-responsive"), plat%><br/>
       <div class="text-center">
         <h3 class="title_plat"><%= link_to plat.title.capitalize,plat %></h3>
+        <h5 class="title_plat"><%=  plat.category %></h5>
       </div>
       <%= plat.comments.count %> Commantaire
       </div>
       <% end %><br/>
   </div>
+</div>
