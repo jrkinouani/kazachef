@@ -1,57 +1,36 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@media(min-width:768px) {
-  .navbar-default {
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-    padding: 15px 0;
-    background: transparent;
-    border-radius: transparent;
-    /* Add additional styles here for the UNCOLLAPSED state */
-  }
-  .navbar-default.affix {
-    padding: 0;
-    background: #fff;
-    padding-left: 30px;
-    padding-right: 30px;
-    /* Add additional styles here for the COLLAPSED state */
-  }
-}
-.navbar-default {
-    border-color: transparent;
-    height: 80px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-.navbar-default .navbar-brand {
-    color: blue;
-    font-size: 30px;
-    font-weight: bold;
-}
-.navbar-default.affix .navbar-nav > li > a {
-    color: black;
-    font-size: 24px
 
+.navbar-default
+{
+    background-color: transparent;
+    
 }
-.navbar-default .navbar-nav > li > a {
-    color: #fff;
+.navbar-brand {
+    color: black;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+.navbar-default .navbar-nav > li > a
+{
+    color: black;
     font-weight: bold;
     font-size: 24px
 }
 
 header
 {
-  padding-top: 300px;
+
   text-align: center;
-  background-image: url(/menu_cuisinee.png);
+  background-image: url(/plat.jpg);
   height: 550px;
   background-size: cover;
   background-repeat:no-repeat;
   color: white;
-  margin-bottom: 30px;
-  opacity: 0.8;
+  /*opacity: 0.8;*/
   filter: alpha(opacity=50);
 
 }
@@ -65,11 +44,11 @@ h3.title_plat
   font-size: 28px;
 }
 
-.navbar-brand
-{
-  font-size: 28px!important;
-}
 #add_plat
 {
   margin-top: 150px;
+}
+h2.slogan
+{
+  font-size: 50px;
 }
