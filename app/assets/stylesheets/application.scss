@@ -5,19 +5,23 @@
 .navbar-default
 {
     background-color: transparent;
-    
+    border-color: transparent;
 }
 .navbar-brand {
-    color: black;
+    color: red;
     font-size: 30px;
     font-weight: 400;
 }
 
-
+.navbar-default .navbar-brand
+ {
+    color: black;
+    background-color: transparent;
+}
 .navbar-default .navbar-nav > li > a
 {
     color: black;
-    font-weight: bold;
+    font-weight: 300;
     font-size: 24px
 }
 
@@ -30,6 +34,7 @@ header
   background-size: cover;
   background-repeat:no-repeat;
   color: white;
+
   /*opacity: 0.8;*/
   filter: alpha(opacity=50);
 
@@ -51,4 +56,20 @@ h3.title_plat
 h2.slogan
 {
   font-size: 50px;
+}
+#card_plat
+{
+  border: 1px solid red;
+
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-bottom: 10px;
 }

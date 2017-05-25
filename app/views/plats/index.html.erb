@@ -18,7 +18,7 @@
        <li><a href="#">DESSERTS</a></li>
        <li><a href="#">SNACKING</a></li>
        <li><a href="#">BOISSONS</a></li>
-       <li><a href="#">Commandez avant 12 h - Dégustez à aprtir de 18h </a></li>
+       <li><a href="#">Commandez avant 12 h - Dégustez à apartir de 18h </a></li>
       </ul>
    </div><!-- /.container-fluid -->
  </nav>
@@ -28,14 +28,24 @@
 <div class="container">
   <div class="row">
     <% @plats.each do |plat| %>
-    <div class="col-lg-4 col-md-4 col-sm-3 col-sx-12">
-      <%= link_to (image_tag plat.image.url,class:"img-responsive"), plat%><br/>
-      <div class="text-center">
-        <h3 class="title_plat"><%= link_to plat.title.capitalize,plat %></h3>
-        <h5 class="title_plat"><%=  plat.category %></h5>
+    <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+     <div class="card">
+      <%= link_to (image_tag plat.image.url,class:"card-img-top"), plat%><br/>
+      <div class="card-block">
+          <h4 class="card-title"><%= link_to plat.title.capitalize,plat %></h4>
+          <div class="meta">
+              <a href="#"><%=  plat.category %></a>
+          </div>
+          <div class="card-text">
+              Tawshif is a web designer living in Bangladesh.
+          </div>
       </div>
-      <%= plat.comments.count %> Commantaire
-      </div>
-      <% end %><br/>
+        <div class="card-footer">
+          <span class="float-right"><%= plat.comments.count %> Commantaire</span>
+          <span><i class=""></i>75 Friends</span>
+        </div>
+     </div>
+    </div>
+      <% end %>
   </div>
 </div>
