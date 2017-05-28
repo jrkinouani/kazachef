@@ -45,7 +45,7 @@ class PlatsController < ApplicationController
   private
 
   def plat_params
-    params.require(:plat).permit(:title, :description, :link, :price, :image, :category)
+    params.require(:plat).permit(:title, :description, :link, :price, :image, :category, :halal)
   end
 
   def set_plat

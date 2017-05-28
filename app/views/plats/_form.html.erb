@@ -2,9 +2,11 @@
   <div class="row">
       <div class="col-md-offset-4 col-lg-4 col-md-4 col-sm-3 col-sx-12">
     <%= simple_form_for(@plat, html: { class: 'form-horizontal', id: "add_plat" }) do |f| %>
-      <%= f.select :category,  ['Choississez une catégorie pour votre plat ?','Normal', 'Végétarien', 'Halal','Végétalien'],	{},{ :class => "form-control"} %>
+      <%= f.select :category,  ['Choississez une catégorie pour votre plat ?','Entrée', 'Plat', 'Dessert','Snacking'],	{},{ :class => "form-control"} %>
       <%= f.file_field :image , :placeholder => "Votre titre", class:"form-control"%>
       <%= f.text_field :title , :placeholder => "Votre titre", class:"form-control"%>
+      <!--<%= f.check_box  :halal,  :as => :boolean, :label => false, :inline_label => true %> halal-->
+
       <%= f.text_area :description , :placeholder => "Votre annonce", class:"form-control"%>
       <%= f.text_field :link, :placeholder => "link to Job",  class:"form-control" %>
       <%= f.number_field :price , :placeholder => "votre prix",  class:"form-control" %>
