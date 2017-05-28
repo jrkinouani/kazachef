@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170526180414) do
+ActiveRecord::Schema.define(version: 20170528073525) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20170526180414) do
     t.datetime "image_updated_at"
     t.string   "category"
     t.boolean  "halal",              default: false
+    t.string   "available"
   end
 
   create_table "users", force: :cascade do |t|
