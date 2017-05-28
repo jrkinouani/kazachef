@@ -1,5 +1,6 @@
 class Plat < ApplicationRecord
   acts_as_votable
+  validates :description, length: { maximum: 140 }
   belongs_to :user
   has_many :comments
   has_attached_file :image

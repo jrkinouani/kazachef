@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170528073525) do
+ActiveRecord::Schema.define(version: 20170528114233) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170528073525) do
     t.string   "category"
     t.boolean  "halal",              default: false
     t.string   "available"
+    t.integer  "person"
   end
 
   create_table "users", force: :cascade do |t|

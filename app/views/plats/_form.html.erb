@@ -4,11 +4,11 @@
     <%= simple_form_for(@plat, html: { class: 'form-horizontal', id: "add_plat" }) do |f| %>
       <%= f.select :category,  ['Choississez une catégorie pour votre plat ?','Entrée', 'Plat', 'Dessert','Snacking'],	{},{ :class => "form-control"} %>
       <%= f.file_field :image , :placeholder => "Votre titre", class:"form-control"%>
-      <%= f.text_field :title , :placeholder => "Votre titre", class:"form-control"%>
-      <!--<%= f.check_box  :halal,  :as => :boolean, :label => false, :inline_label => true %> halal-->
-
-      <%= f.text_area :description , :placeholder => "Votre annonce", class:"form-control"%>
-      <%= f.text_field :link, :placeholder => "link to Job",  class:"form-control" %>
+      <%= f.text_field :title , :placeholder => "Indiquez le nom de votre plat", class:"form-control"%>
+      <%= f.check_box  :halal,  :as => :boolean, :label => false, :inline_label => true %>
+      <%= f.number_field :person, :placeholder => "votre plat est pour combien de personnes ? ",  class:"form-control"%>
+      <%= f.text_area :description , :placeholder => "Décrivez votre recette en 140 caractères maxi", class:"form-control"%>
+      <!--<%= f.text_field :link, :placeholder => "link to Job",  class:"form-control" %>-->
       <%= f.select :available,  ['Choississez un jour de préparation pour ce plat ','Lundi', 'Mardi', 'Mercredi','Jeudi','Vendredi', 'Samedi', 'Dimanche'],	{},{ :class => "form-control"} %>
       <%= f.number_field :price , :placeholder => "votre prix",  class:"form-control" %>
 
