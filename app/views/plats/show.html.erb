@@ -1,16 +1,53 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-md-4">
-    <%= image_tag @plat.image.url, class:"img-responsive" %>
-
-    <h2><%= @plat.title %></h2>
-    <h2><%= @plat.description %></h2>
-    <!--<h2><%= @plat.link %></h2>-->
+    <div class="col-md-8 col-md-8">
+      <div class="text-center"><h2><%= @plat.title %></h2></div>
+        <%= image_tag @plat.image.url, class:"img-responsive" %>
+        <h2><%= @plat.description %></h2>
+        <!--<h2><%= @plat.link %></h2>-->
       disponible uniquement le <%=  @plat.available %>
-    <h2><%= @plat.price %> €</h2>
-    <h2><%= @plat.user.name %></h2>
+      <h2><%= @plat.price %> €</h2>
+      <h2><%= @plat.user.name %></h2>
       <h2><%  if @plat.halal %>Halal <% end %></h2>
-  </div>
+    </div>
+    <div class="col-md-4 col-md-4">
+
+      <div class="panel-body">
+
+                        <div class="row">
+                          <div class="col-md-6 col-sm-12">
+                            <div class="form-group select optional order_portion_number mnd-select"><label class="control-label select optional" for="order_portion_number">Nombre de portions</label><div class="mnd-select-wrapper"><select class="form-control select optional" name="order[portion_number]" id="order_portion_number"><option selected="selected" value="1">1 portion</option>
+                            <option value="2">2 portions</option>
+                            <option value="3">3 portions</option>
+                            <option value="4">4 portions</option>
+                            <option value="5">5 portions</option>
+                            <option value="6">6 portions</option>
+                            <option value="7">7 portions</option>
+                            <option value="8">8 portions</option>
+                            <option value="9">9 portions</option>
+                            <option value="10">10 portions</option>
+                            <option value="11">11 portions</option>
+                            <option value="12">12 portions</option>
+                            <option value="13">13 portions</option>
+                            <option value="14">14 portions</option>
+                            <option value="15">15 portions</option>
+                            <option value="16">16 portions</option>
+                            <option value="17">17 portions</option>
+                            <option value="18">18 portions</option>
+                            <option value="19">19 portions</option>
+                            <option value="20">20 portions</option></select></div></div>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <div class="form-group select optional order_takeaway_interval mnd-select"><label class="control-label select optional" for="order_takeaway_interval">Heures de takeaway</label><div class="mnd-select-wrapper"><select class="form-control select optional" name="order[takeaway_interval]" id="order_takeaway_interval"><option value="16:00 - 17:00">16h00 - 17h00</option>
+                            <option value="17:00 - 18:00">17h00 - 18h00</option>
+                            <option selected="selected" value="18:00 - 19:00">18h00 - 19h00</option>
+                            <option value="19:00 - 20:00">19h00 - 20h00</option></select></div></div>
+                          </div>
+                        </div>
+                      </div>
+    </div>
+ </div>
+
     <!--comment-->
     <h2><%= @comment_count= pluralize(@plat.comments.count, "comment") %></h2>
     <% @comments.each do |comment| %>
@@ -24,5 +61,5 @@
     <h1><%= link_to "Edit", edit_plat_path(@plat) %></h1>
     <h1><%= link_to "Destroy", plat_path(@plat), method: :delete, data: {confirm: "Are you sure"} %></h1>
     <h1><%= link_to "Home", root_path %></h1>
-  </div>
+
 </div>
