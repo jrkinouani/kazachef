@@ -22,7 +22,7 @@
 {
     color: black;
     font-weight: 300;
-    font-size: 24px
+    font-size: 18px
 }
 
 header
@@ -94,4 +94,16 @@ h2.slogan
 .float-left
 {
   float: left;
+}
+.float-right
+{
+  float: right;
+}
+/*page show */
+h2.title_show
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #2e426b;
+    font: 700 3rem/3.4rem Chronicle,Times,Times New Roman,serif;
 }

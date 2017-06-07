@@ -18,8 +18,8 @@
 
   <body>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -37,9 +37,11 @@
             <ul class="nav navbar-nav navbar-right">
 
               <li><%= link_to "Comment ça marche", comment_path %></li>
+              <li><%= link_to "Hygiène", hygiene_path %></li>
+              <li><%= link_to "devenir chef", chef_path %></li>
               <li><%= link_to "A propos", apropos_path %></li>
               <li><%if user_signed_in? %></li>
-              <li>  <a href="#"> Hi <%= current_user.name %> </a></li>
+              <!--<li>  <a href="#"> Hi <%= current_user.name %> </a></li>-->
               <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
               <li> <%= button_to "add new post", new_plat_path, class: "btn btn-primary navbar-btn", :method => :get  %></li>
              <% else %>

@@ -17,4 +17,7 @@ class StaticPagesController < ApplicationController
   def apropos
 
   end
+  def hygiene
+
+  end
 end

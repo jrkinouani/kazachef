@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 col-md-8">
-      <div class="text-center"><h2><%= @plat.title %></h2></div>
         <%= image_tag @plat.image.url, class:"img-responsive" %>
-        <h2><%= @plat.description %></h2>
-        <!--<h2><%= @plat.link %></h2>-->
+        <h2 class="title_show"><%= @plat.title.capitalize %></h2>
+        <h2 ><%= @plat.description %></h2>
+
       disponible uniquement le <%=  @plat.available %>
       <h2><%= @plat.price %> €</h2>
       <h2><%= @plat.user.name %></h2>
